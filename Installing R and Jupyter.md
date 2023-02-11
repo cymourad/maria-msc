@@ -22,3 +22,22 @@
 
    - select `R` as the kernel
    - run the first cell to check if everything works
+
+# Python Notebook
+
+1. Create a new notebook in VS Code
+2. Create a virtual environment and name it thesis
+
+- `python3 -m venv thesis`
+
+3. Activate the virtual environment
+   - `source thesis/bin/activate`
+4. Install the required packages
+   - `pip install -r requirements.txt`
+5. Install the kernel
+   - `python -m ipykernel install --user --name thesis --display-name "Python (thesis)"`
+6. Deactivate the virtual environment
+   - `deactivate`
+7. Select the kernel in the notebook
+   - `Kernel` -> `Change Kernel` -> `Python (thesis)`
+8. Run the first cell to check if everything works
