@@ -23,6 +23,11 @@
    - select `R` as the kernel
    - run the first cell to check if everything works
 
+6. Add `meta` and `metafor` packages
+
+   - open `R` and run `install.packages('meta')`
+   - open `R` and run `install.packages('metafor')`
+
 # Python Notebook
 
 1. Create a new notebook in VS Code
