@@ -8,7 +8,7 @@
 
 4. **Extract data**: Extract the relevant data from each study, including study design, sample size, interventions or exposures, outcomes, and other relevant data. This should be done using a standardized data extraction form to ensure consistency.
 
-5. **Analyze data**: Calculate the effect sizes for each study, usually in the form of a standardized mean difference or odds ratio. These effect sizes can then be combined using statistical methods to produce an overall effect size estimate.
+5. **Analyze data**: Calculate the effect sizes for each study, in the form of a ~standardized mean difference or~ odds ratio. These effect sizes can then be combined using statistical methods to produce an overall effect size estimate.
 
 6. **Assess heterogeneity**: Determine whether there is significant heterogeneity in the data using statistical tests such as Cochran's Q test and I^2 statistic. If heterogeneity is present, explore potential sources of heterogeneity using subgroup analyses or meta-regression.
 
