@@ -1,6 +1,6 @@
 Article_ID,Total_Cohort,Measure_Name,Measure_Value,95_CI_lower,95_CI_upper,N1_Cancer,N2_No_Cancer,Cancer Type,Exclude From Overall Plot,CANCER GROUP,
 
-"Di Luccia, 2010","1,216",OR,3.04,1.22,7.57,,,Melanoma,,SKIN,
+"Di Lucca, 2010","1,216",OR,3.04,1.22,7.57,,,Melanoma,,SKIN,
 
 "Brewster, 2010","77,518",SIR,1.4,0.17,5.04,,,Melanoma,,SKIN,
 "Brewster, 2010","77,518",SIR,0,0,3.11,,,Basal Cell Carcinoma,,SKIN,

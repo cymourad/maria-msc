@@ -1,5 +1,5 @@
 "","Article_ID","Total_Cohort","Measure_Name","Measure_Value","X95_CI_lower","X95_CI_upper","N1_Cancer","N2_No_Cancer","Cancer.Type","Exclude.From.Overall.Plot","CANCER.GROUP","X","n","OR","odds_ratio","lower_ci","upper_ci","article_id","cancer_type","cancer_group","exclude_from_overall_plot","Article_Code"
-"1","Di Luccia, 2010","1,216","OR",3.04,1.22,7.57,0,0,"Melanoma","","SKIN",NA,1216,3.04,3.04,1.22,7.57,"Di Luccia, 2010","Melanoma","SKIN","","D10"
+"1","Di Lucca, 2010","1,216","OR",3.04,1.22,7.57,0,0,"Melanoma","","SKIN",NA,1216,3.04,3.04,1.22,7.57,"Di Lucca, 2010","Melanoma","SKIN","","D10"
 "2","Brewster, 2010","77,518","SIR",1.4,0.17,5.04,0,0,"Melanoma","","SKIN",NA,77518,1.4,1.4,0.17,5.04,"Brewster, 2010","Melanoma","SKIN","","B10"
 "3","Brewster, 2010","77,518","SIR",0,0,3.11,0,0,"Basal Cell Carcinoma","","SKIN",NA,77518,1e-04,1e-04,0,3.11,"Brewster, 2010","Basal Cell Carcinoma","SKIN","","B10"
 "4","Cnattingius, 1995","98","OR",7.5,1.8,31.9,0,0,"Myeloid Leukemia","","BLOOD",NA,98,7.5,7.5,1.8,31.9,"Cnattingius, 1995","Myeloid Leukemia","BLOOD","","C95"
