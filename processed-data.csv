@@ -52,3 +52,7 @@
 "51","Newman, 2016","499,621","Crude IRR",2.8,0.3,13,0,0,"Bone","","SOLID ORGAN",NA,499621,2.8,2.8,0.3,13,"Newman, 2016","Bone","SOLID ORGAN","","N16"
 "52","Newman, 2016","499,621","Crude IRR",5.2,0.9,21,0,0,"Liver Cancer","","SOLID ORGAN",NA,499621,5.2,5.2,0.9,21,"Newman, 2016","Liver Cancer","SOLID ORGAN","","N16"
 "53","Newman, 2016","499,621","Crude IRR",1,0.6,1.7,0,0,"Other Cancer","YES","",NA,499621,1,1,0.6,1.7,"Newman, 2016","Other Cancer","","YES","N16"
+"54","Cnattingius2, 1995","613","OR",1,0.5,1.8,0,0,"Lymphocytic Leukemia","","BLOOD",NA,613,1,1,0.5,1.8,"Cnattingius2, 1995","Lymphocytic Leukemia","BLOOD","","C95"
+"55","Kadivar, 2020","118","OR",1.55,1.13,2.12,0,0,"Any Cancer","","",NA,118,1.55,1.55,1.13,2.12,"Kadivar, 2020","Any Cancer","","","K20"
+"56","Roman, 1997","10","OR",0.5,0.1,2.3,0,0,"Leukemia","","BLOOD",NA,10,0.5,0.5,0.1,2.3,"Roman, 1997","Leukemia","BLOOD","","R97"
+"57","Roman, 1997","8","OR",0.6,0.1,3.4,0,0,"Lymphocytic Leukemia","","BLOOD",NA,8,0.6,0.6,0.1,3.4,"Roman, 1997","Lymphocytic Leukemia","BLOOD","","R97"
