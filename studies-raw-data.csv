@@ -53,7 +53,7 @@ Article_ID,Total_Cohort,Measure_Name,Measure_Value,95_CI_lower,95_CI_upper,N1_Ca
 "Newman et al., 2016","499,621",Crude IRR,2.8,0.3,13,,,Bone,,SOLID ORGAN,
 "Newman et al., 2016","499,621",Crude IRR,5.2,0.9,21,,,Liver Cancer,,SOLID ORGAN,
 "Newman et al., 2016","499,621",Crude IRR,1,0.6,1.7,,,Other Cancer,YES,,
-"Cnattingius2 et al., 1995","613",OR,1,0.5,1.8,,,Lymphocytic Leukemia,,BLOOD,
+"Cnattingius et al., 1995 (2)","613",OR,1,0.5,1.8,,,Lymphocytic Leukemia,,BLOOD,
 "Kadivar et al., 2020","118",OR,1.55,1.13,2.12,,,Any Cancer,,,
 "Roman et al., 1997","10",OR,0.5,0.1,2.3,,,Leukemia,,BLOOD,
 "Roman et al., 1997","8",OR,0.6,0.1,3.4,,,Lymphocytic Leukemia,,BLOOD,
