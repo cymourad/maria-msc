@@ -1,0 +1,231 @@
+/* Base styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --background-color: #f5f6fa;
+    --border-color: #dcdde1;
+    --success-color: #27ae60;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+    --white: #ffffff;
+    --primary: #2c3e50;
+    --primary-dark: #233140;
+    --background: #f5f6fa;
+    --success: #27ae60;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.side-nav {
+    width: 250px;
+    background-color: var(--primary);
+    padding: 20px;
+    color: var(--white);
+}
+
+.nav-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.nav-header h1 {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--primary-dark);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--background);
+    position: relative;
+}
+
+#formsContainer {
+    margin-bottom: 60px; /* Space for navigation buttons */
+}
+
+/* Forms */
+.tab-content {
+    display: none;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Navigation Buttons */
+.form-navigation {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button,
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-button {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.submit-button {
+    background-color: var(--success);
+    color: var(--white);
+}
+
+.nav-button:hover,
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+/* Risk Levels */
+.risk-level {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.risk-low {
+    background-color: #27ae60;
+    color: white;
+}
+
+.risk-moderate {
+    background-color: #f1c40f;
+    color: black;
+}
+
+.risk-serious {
+    background-color: #e67e22;
+    color: white;
+}
+
+.risk-critical {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Assessment Results */
+.assessment-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--accent-color);
+}
+
+.domain-summary {
+    margin-bottom: 30px;
+}
+
+.domain-risks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.domain-risk {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}

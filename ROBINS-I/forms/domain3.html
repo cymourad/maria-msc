@@ -1,0 +1,75 @@
+<div id="bias3" class="tab-content">
+    <h2>Bias Due to Missing Data</h2>
+    <form id="bias3Form" class="assessment-form">
+        <div class="form-group">
+            <label for="dataAvailable">3.1 Were outcome data available for all, or nearly all, participants?</label>
+            <select id="dataAvailable" name="dataAvailable" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="dataAvailableNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="participantsExcluded">3.2 Were participants excluded due to missing data on intervention status?</label>
+            <select id="participantsExcluded" name="participantsExcluded" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="participantsExcludedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="reasonsReported">3.3 Were participants excluded due to missing data on other variables needed for the analysis?</label>
+            <select id="reasonsReported" name="reasonsReported" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="reasonsReportedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="proportionMissing">3.4 Are the proportion of participants and reasons for missing data similar across interventions?</label>
+            <select id="proportionMissing" name="proportionMissing" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="proportionMissingNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="potentialImpact">3.5 Is there evidence that results were robust to the presence of missing data?</label>
+            <select id="potentialImpact" name="potentialImpact" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="potentialImpactNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div id="bias3Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+        </div>
+    </form>
+</div>

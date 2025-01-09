@@ -1,0 +1,49 @@
+<div id="bias6" class="tab-content">
+    <h2>Bias in Selection of Reported Results</h2>
+    <form id="bias6Form" class="assessment-form">
+        <div class="form-group">
+            <label for="analysisPreSpecified">6.1 Was the reported effect estimate likely to be selected, on the basis of the results, from multiple outcome measurements within the outcome domain?</label>
+            <select id="analysisPreSpecified" name="analysisPreSpecified" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="analysisPreSpecifiedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="multipleAnalyses">6.2 Was the reported effect estimate likely to be selected, on the basis of the results, from multiple analyses of the intervention-outcome relationship?</label>
+            <select id="multipleAnalyses" name="multipleAnalyses" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="multipleAnalysesNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="subgroupAnalyses">6.3 Was the reported effect estimate likely to be selected, on the basis of the results, from different subgroups?</label>
+            <select id="subgroupAnalyses" name="subgroupAnalyses" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="subgroupAnalysesNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div id="bias6Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+        </div>
+    </form>
+</div>

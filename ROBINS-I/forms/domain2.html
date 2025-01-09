@@ -1,0 +1,79 @@
+<div id="bias2" class="tab-content">
+    <h2>Bias in Classification of Interventions</h2>
+    <form id="bias2Form" class="assessment-form">
+        <div class="form-group">
+            <label for="interventionDefinition">2.1 Does intervention definition rely on events after start of follow-up?</label>
+            <select id="interventionDefinition" name="interventionDefinition" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="interventionDefinitionNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="participantsIncluded">2.2 Were participants included in comparator group until experimental intervention?</label>
+            <select id="participantsIncluded" name="participantsIncluded" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="participantsIncludedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="informationRecorded">2.3 Was information recorded at start of intervention?</label>
+            <select id="informationRecorded" name="informationRecorded" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="informationRecordedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="classificationInfluenced">2.4 Was classification of intervention influenced by outcome?</label>
+            <select id="classificationInfluenced" name="classificationInfluenced" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+                <option value="SY">Seriously Yes (SY)</option>
+                <option value="WY">Weakly Yes (WY)</option>
+            </select>
+            <textarea name="classificationInfluencedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="interventionClassified">2.5 Was intervention classified correctly for all participants?</label>
+            <select id="interventionClassified" name="interventionClassified" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+                <option value="SN">Seriously No (SN)</option>
+                <option value="WN">Weakly No (WN)</option>
+            </select>
+            <textarea name="interventionClassifiedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div id="bias2Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+        </div>
+    </form>
+</div>

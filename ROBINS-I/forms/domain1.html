@@ -1,0 +1,75 @@
+<div id="bias1" class="tab-content">
+    <h2>Bias Due to Confounding</h2>
+    <form id="bias1Form" class="assessment-form">
+        <div class="form-group">
+            <label for="criticalConfounders">1.1 Is there potential for confounding of the effect of intervention in this study?</label>
+            <select id="criticalConfounders" name="criticalConfounders" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="criticalConfoundersNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="confoundersAppropriatelyMeasured">1.2 Was the analysis based on splitting participants' follow up time according to intervention received?</label>
+            <select id="confoundersAppropriatelyMeasured" name="confoundersAppropriatelyMeasured" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="confoundersAppropriatelyMeasuredNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="confoundersBalanced">1.3 Were intervention discontinuations or switches likely to be related to factors that are prognostic for the outcome?</label>
+            <select id="confoundersBalanced" name="confoundersBalanced" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="confoundersBalancedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="interventionDiscontinuation">1.4 Did the authors use an appropriate analysis method that controlled for all the important confounding domains?</label>
+            <select id="interventionDiscontinuation" name="interventionDiscontinuation" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="interventionDiscontinuationNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="appropriateAnalysis">1.5 Were confounding domains that were controlled for measured validly and reliably by the variables available in this study?</label>
+            <select id="appropriateAnalysis" name="appropriateAnalysis" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="appropriateAnalysisNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div id="bias1Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+        </div>
+    </form>
+</div>

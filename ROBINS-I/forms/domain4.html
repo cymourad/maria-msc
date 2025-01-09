@@ -1,0 +1,62 @@
+<div id="bias4" class="tab-content">
+    <h2>Bias in Measurement of Outcomes</h2>
+    <form id="bias4Form" class="assessment-form">
+        <div class="form-group">
+            <label for="methodsAppropriate">4.1 Was the method of measuring the outcome appropriate?</label>
+            <select id="methodsAppropriate" name="methodsAppropriate" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="methodsAppropriateNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="differentialMeasurement">4.2 Could differences between intervention groups in how the outcome was measured have led to bias?</label>
+            <select id="differentialMeasurement" name="differentialMeasurement" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="differentialMeasurementNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="assessorsBlinded">4.3 Were outcome assessors aware of the intervention received by study participants?</label>
+            <select id="assessorsBlinded" name="assessorsBlinded" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="assessorsBlindedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="errorSystematic">4.4 Could assessment of the outcome have been influenced by knowledge of the intervention received?</label>
+            <select id="errorSystematic" name="errorSystematic" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="errorSystematicNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div id="bias4Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+        </div>
+    </form>
+</div>

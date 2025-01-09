@@ -1,0 +1,62 @@
+<div id="bias5" class="tab-content">
+    <h2>Bias Due to Deviations</h2>
+    <form id="bias5Form" class="assessment-form">
+        <div class="form-group">
+            <label for="deviationsBalanced">5.1 Were there deviations from the intended intervention beyond what would be expected in usual practice?</label>
+            <select id="deviationsBalanced" name="deviationsBalanced" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="deviationsBalancedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="deviationsAffectOutcome">5.2 Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?</label>
+            <select id="deviationsAffectOutcome" name="deviationsAffectOutcome" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="deviationsAffectOutcomeNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="deviationsReported">5.3 Were important co-interventions balanced across intervention groups?</label>
+            <select id="deviationsReported" name="deviationsReported" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="deviationsReportedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="appropriateAnalysis">5.4 Was the intervention implemented successfully for most participants?</label>
+            <select id="appropriateAnalysis" name="appropriateAnalysis" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="appropriateAnalysisNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div id="bias5Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBINS-I Assessment Tool</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="side-nav">
+            <div class="nav-header">
+                <h1>ROBINS-I</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-tab="general">General Information</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain1">Bias Due to Confounding</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain2">Bias in Selection</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain3">Bias in Classification</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain4">Bias in Measurement</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain5">Bias Due to Deviations</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain6">Bias in Reported Results</a></li>
+                <li><a href="#" class="nav-link" data-tab="domain7">Overall Assessment</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <div id="formsContainer">
+                <!-- Forms will be loaded here dynamically -->
+            </div>
+
+            <div class="form-navigation">
+                <button type="button" id="prevBtn" class="nav-button">Previous</button>
+                <button type="button" id="nextBtn" class="nav-button">Next</button>
+                <button type="button" id="submitBtn" class="submit-button" style="display: none;">Generate Report</button>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

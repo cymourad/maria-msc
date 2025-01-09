@@ -1,0 +1,27 @@
+<div id="general" class="tab-content active">
+    <h2>General Information</h2>
+    <form id="generalForm" class="assessment-form">
+        <div class="form-group">
+            <label for="studyTitle">Study Title:</label>
+            <input type="text" id="studyTitle" name="studyTitle" required>
+        </div>
+        <div class="form-group">
+            <label for="authors">Authors:</label>
+            <input type="text" id="authors" name="authors" required>
+        </div>
+        <div class="form-group">
+            <label for="publicationYear">Publication Year:</label>
+            <input type="number" id="publicationYear" name="publicationYear" required>
+        </div>
+        <div class="form-group">
+            <label for="studyDesign">Study Design:</label>
+            <select id="studyDesign" name="studyDesign" required>
+                <option value="">Select study design...</option>
+                <option value="cohort">Cohort Study</option>
+                <option value="caseControl">Case-Control Study</option>
+                <option value="crossSectional">Cross-sectional Study</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </form>
+</div>
