@@ -129,3 +129,174 @@
         </div>
     </form>
 </div>
+
+<div id="generalAssessment" class="tab-content">
+    <h2>Overall Risk of Bias Assessment</h2>
+    <form id="generalAssessmentForm" class="assessment-form">
+        <div class="domain-summary">
+            <h3>Summary of Domain Assessments</h3>
+            <div class="domain-risks">
+                <div class="domain-risk">
+                    <label>Domain 1: Bias due to confounding</label>
+                    <span class="risk-badge" id="domain1Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain1Notes"></div>
+                </div>
+                <div class="domain-risk">
+                    <label>Domain 2: Bias in selection of participants</label>
+                    <span class="risk-badge" id="domain2Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain2Notes"></div>
+                </div>
+                <div class="domain-risk">
+                    <label>Domain 3: Bias in classification of interventions</label>
+                    <span class="risk-badge" id="domain3Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain3Notes"></div>
+                </div>
+                <div class="domain-risk">
+                    <label>Domain 4: Bias due to deviations from intended interventions</label>
+                    <span class="risk-badge" id="domain4Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain4Notes"></div>
+                </div>
+                <div class="domain-risk">
+                    <label>Domain 5: Bias due to missing data</label>
+                    <span class="risk-badge" id="domain5Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain5Notes"></div>
+                </div>
+                <div class="domain-risk">
+                    <label>Domain 6: Bias in measurement of outcomes</label>
+                    <span class="risk-badge" id="domain6Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain6Notes"></div>
+                </div>
+                <div class="domain-risk">
+                    <label>Domain 7: Bias in selection of the reported result</label>
+                    <span class="risk-badge" id="domain7Risk">Not Assessed</span>
+                    <div class="domain-notes" id="domain7Notes"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overall-assessment">
+            <h3>Overall Risk of Bias</h3>
+            <div class="form-group">
+                <label>What is the overall risk of bias for this study?
+                    <div class="help-text">
+                        Low: The study is comparable to a well-performed randomized trial with regard to this outcome.
+                        - Study is judged to be at low risk of bias for all domains
+                        
+                        Moderate: The study appears to provide sound evidence for a non-randomized study but cannot be considered comparable to a well-performed randomized trial.
+                        - Study is judged to be at low or moderate risk of bias for all domains
+                        
+                        Serious: The study has some important problems.
+                        - Study is judged to be at serious risk of bias in at least one domain, but not at critical risk of bias in any domain
+                        
+                        Critical: The study is too problematic to provide any useful evidence on the effects of intervention.
+                        - Study is judged to be at critical risk of bias in at least one domain
+                        
+                        No information: No clear indication that major problems would put the study at serious or critical risk of bias, but insufficient information provided in relation to key domains.
+                        - There is no clear indication that the study is at serious or critical risk of bias AND
+                        - There is lack of information in one or more key domains of bias
+                    </div>
+                </label>
+                <select id="overallRisk" name="overallRisk" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Provide rationale for overall risk of bias judgement:
+                    <div class="help-text">
+                        Consider:
+                        - The relative importance of the different domains for the specific review context
+                        - Direction of potential bias (underestimation or overestimation of effect)
+                        - Magnitude of potential bias
+                        - Strength of evidence for presence of bias
+                    </div>
+                </label>
+                <textarea id="overallRiskRationale" name="overallRiskRationale" rows="4" placeholder="Explain your overall risk of bias judgement..."></textarea>
+            </div>
+        </div>
+
+        <div class="additional-considerations">
+            <h3>Additional Considerations</h3>
+            <div class="form-group">
+                <label>Direction of Bias:
+                    <div class="help-text">
+                        Indicate whether identified biases are likely to:
+                        - Favor the experimental intervention
+                        - Favor the comparator
+                        - Favor both interventions
+                        - Be unpredictable
+                    </div>
+                </label>
+                <select id="biasDirection" name="biasDirection" required>
+                    <option value="">Select direction...</option>
+                    <option value="favors_experimental">Favors experimental intervention</option>
+                    <option value="favors_comparator">Favors comparator</option>
+                    <option value="favors_both">Favors both interventions</option>
+                    <option value="unpredictable">Unpredictable</option>
+                </select>
+                <textarea id="biasDirectionNotes" name="biasDirectionNotes" rows="2" placeholder="Explain the likely direction of bias..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Other Comments:</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Enter any additional notes about the assessment..."></textarea>
+            </div>
+        </div>
+
+        <div id="assessmentResult" class="assessment-result" style="display: none;">
+            <h3>Final Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
+            <p class="direction"></p>
+        </div>
+    </form>
+</div>
+
+<style>
+.domain-risks {
+    margin: 20px 0;
+}
+
+.domain-risk {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-left: 10px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.domain-notes {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.help-text {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ddd;
+}
+
+.assessment-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+</style>

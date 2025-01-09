@@ -1,89 +1,194 @@
 <div id="bias3" class="tab-content">
-    <h2>Bias in Selection of Participants</h2>
+    <h2>Domain 3: Bias in Selection of Participants into the Study</h2>
     <form id="bias3Form" class="assessment-form">
-        <div class="form-group">
-            <label for="selectionStart">3.1 Did assignment of participants to the intervention group or the comparator group rely on events or measurements that occurred after the start of follow up?
-                <div class="help-text">
-                    Using events or measurements that occurred after the start of follow up to assign participants to groups may lead to some participants having a period of 'immortal time' during which the outcome cannot occur. Examples include interventions defined as receipt of a minimum number of prescriptions or eligibility followed by receipt of a surgical intervention.
-                </div>
-            </label>
-            <select id="selectionStart" name="selectionStart" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="selectionStartNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="preliminary-considerations">
+            <h3>Preliminary considerations</h3>
+            <div class="form-group">
+                <label>Is selection into the study unrelated to intervention or unrelated to outcome?
+                    <div class="help-text">
+                        If Y/PY to all: the study can be considered to be at low risk of bias due to selection of participants into the study and no further signalling questions need be considered.
+                    </div>
+                </label>
+                <select id="selectionUnrelated" name="selectionUnrelated" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="selectionUnrelatedNotes" placeholder="Provide rationale for your answer..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Do start of follow-up and start of intervention coincide for most participants?
+                    <div class="help-text">
+                        If Y/PY to all: the study can be considered to be at low risk of bias due to selection of participants into the study and no further signalling questions need be considered.
+                    </div>
+                </label>
+                <select id="followupCoincide" name="followupCoincide" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="followupCoincideNotes" placeholder="Explain the timing of follow-up and intervention..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="exclusionAfterStart">3.2 Were participants excluded after the start of follow-up because they did not meet the definition of either the intervention or the comparator?
-                <div class="help-text">
-                    In this situation, participants who would have received the intervention but experienced an outcome event soon after the start of follow up are more likely to be excluded, leading to immortal time bias.
-                </div>
-            </label>
-            <select id="exclusionAfterStart" name="exclusionAfterStart" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="exclusionAfterStartNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="signalling-questions">
+            <h3>3.1 Selection of participants into the study</h3>
+            
+            <div class="form-group">
+                <label>3.1.1 Were there post-intervention variables that influenced selection into the study?
+                    <div class="help-text">
+                        Selection bias occurs when selection is related to an effect of either intervention or a cause of intervention and outcome.
+                        Post-intervention variables include:
+                        - Symptoms/signs of adverse effects
+                        - Test results
+                        - Participant decisions
+                        - Clinician decisions
+                        - Time from intervention to inclusion
+                    </div>
+                </label>
+                <select id="postInterventionSelection" name="postInterventionSelection" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="postInterventionSelectionNotes" placeholder="List any post-intervention variables that influenced selection..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>3.1.2 Do these post-intervention variables suggest that selection into the study was affected by the outcome or a cause of the outcome?
+                    <div class="help-text">
+                        Selection affected by intervention and outcome, or a cause of intervention and outcome, will be biased.
+                        Consider whether:
+                        - Post-intervention variables are causes or consequences of outcomes
+                        - Post-intervention variables are related to intervention and outcome
+                    </div>
+                </label>
+                <select id="selectionAffected" name="selectionAffected" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="selectionAffectedNotes" placeholder="Explain how selection might have been affected..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="startTiming">3.3 Were start of follow up and start of intervention the same for most participants?
-                <div class="help-text">
-                    If participants are not followed from the start of the intervention then a period of follow up has been excluded, and individuals who experienced the outcome soon after intervention will be missing from analyses. This problem may occur when prevalent, rather than new (incident), users of the intervention are included in analyses. If the comparison group is "no intervention" then follow up can start at any point at which participants remain eligible to start the intervention.
-                </div>
-            </label>
-            <select id="startTiming" name="startTiming" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="startTimingNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="selection-into-analysis">
+            <h3>3.2 Selection of participants into the analysis</h3>
+
+            <div class="form-group">
+                <label>3.2.1 Were the post-intervention variables that influenced selection likely to be associated with intervention?
+                    <div class="help-text">
+                        Consider whether:
+                        - Reasons for missing data differ between intervention groups
+                        - Intervention affects the likelihood of missing data
+                        - The analysis has appropriately accounted for these differences
+                    </div>
+                </label>
+                <select id="interventionAssociation" name="interventionAssociation" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="interventionAssociationNotes" placeholder="Describe associations between post-intervention variables and intervention..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>3.2.2 Were the post-intervention variables that influenced selection likely to be influenced by the outcome or a cause of the outcome?
+                    <div class="help-text">
+                        Consider whether:
+                        - Missing data depend on the true value of the outcome
+                        - Missing data depend on the history of prior outcomes
+                        - Exclusion of participants depends on potential confounding variables
+                    </div>
+                </label>
+                <select id="outcomeInfluence" name="outcomeInfluence" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="outcomeInfluenceNotes" placeholder="Explain potential influences on selection..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>3.2.3 Were the proportion of participants and reasons for missing data similar across interventions?
+                    <div class="help-text">
+                        Consider both the numbers of participants and the reasons for exclusion across interventions.
+                        Similar proportions of missing data do not rule out bias. Similar reasons across groups strengthen confidence in the absence of bias.
+                    </div>
+                </label>
+                <select id="missingDataSimilar" name="missingDataSimilar" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="missingDataSimilarNotes" placeholder="Compare missing data across intervention groups..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>3.2.4 Were there any other features of the study that put it at risk of selection bias?
+                    <div class="help-text">
+                        Consider whether:
+                        - Differential follow-up between groups may have led to selection bias
+                        - Administrative censoring has resulted in systematic differences between groups
+                        - There are other sources of selection bias not covered by previous questions
+                    </div>
+                </label>
+                <select id="otherSelectionBias" name="otherSelectionBias" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="otherSelectionBiasNotes" placeholder="Describe any other potential sources of selection bias..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="effectConstant">3.4 If start of follow up and start of intervention were not the same for most participants: Is the effect of intervention expected to be constant over the time period studied?
-                <div class="help-text">
-                    Consider the effect of intervention (for example, rate ratio) that is estimated by the result being assessed. If the effect varies over time the estimate based on follow up from the start of intervention will differ from the effect restricted to later follow up.
-                </div>
-            </label>
-            <select id="effectConstant" name="effectConstant" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="effectConstantNotes" placeholder="Additional notes..." rows="2"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="selectionBias">3.5 Was selection of participants into the study (or into the analysis) based on participant characteristics observed after the start of intervention?
-                <div class="help-text">
-                    Selection bias occurs when selection is related to an effect of either intervention or a cause of intervention and an effect of either the outcome or a cause of the outcome. This domain does not address exclusion because of missing data.
-                </div>
-            </label>
-            <select id="selectionBias" name="selectionBias" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="selectionBiasNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="risk-of-bias">
+            <h3>Risk of bias judgement</h3>
+            <div class="form-group">
+                <label>What is the risk of bias due to selection of participants into the study?
+                    <div class="help-text">
+                        Low: All participants who would have been eligible for the target trial were included in the study and start of follow up and start of intervention coincide for all participants
+                        Moderate: Selection into the study may have been related to intervention and outcome but the authors used appropriate methods to adjust for the selection bias
+                        Serious: Selection into the study was related to intervention and outcome and this could not be adjusted for in analyses
+                        Critical: Selection into the study was strongly related to intervention and outcome and this could not be adjusted for in analyses
+                        No information: No information is reported about selection of participants into the study or whether start of follow up and start of intervention coincide
+                    </div>
+                </label>
+                <select id="biasRiskJudgement" name="biasRiskJudgement" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+                <textarea name="biasRiskJudgementNotes" placeholder="Provide rationale for risk of bias rating..." rows="3"></textarea>
+            </div>
         </div>
 
         <div id="bias3Result" class="assessment-result" style="display: none;">

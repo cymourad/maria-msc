@@ -1,89 +1,150 @@
 <div id="bias2" class="tab-content">
-    <h2>Bias in Classification of Interventions</h2>
+    <h2>Domain 2: Bias in Classification of Interventions</h2>
     <form id="bias2Form" class="assessment-form">
-        <div class="form-group">
-            <label for="interventionDefinition">2.1 Does intervention definition rely on events after start of follow-up?
-                <div class="help-text">
-                    Examples include: (i) interventions defined as receipt of a minimum number of prescriptions, and (ii) intervention defined as eligibility for, followed by subsequent receipt of, a surgical intervention such as heart transplant.
-                </div>
-            </label>
-            <select id="interventionDefinition" name="interventionDefinition" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="interventionDefinitionNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="preliminary-considerations">
+            <h3>Preliminary considerations</h3>
+            <div class="form-group">
+                <label>Is misclassification of intervention status unlikely in this study?
+                    <div class="help-text">
+                        If Y/PY to all: the study can be considered to be at low risk of bias due to misclassification of interventions and no further signalling questions need be considered
+                    </div>
+                </label>
+                <select id="misclassificationUnlikely" name="misclassificationUnlikely" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="misclassificationUnlikelyNotes" placeholder="Provide rationale for your answer..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="participantsIncluded">2.2 Were participants included in comparator group until experimental intervention?
-                <div class="help-text">
-                    Note that this question does not address situations in which follow-up time is split according to intervention received. Answer 'SY' if the impact of including participants in the comparator group until they fulfilled the definition of the intervention was likely to be substantial.
-                </div>
-            </label>
-            <select id="participantsIncluded" name="participantsIncluded" required>
-                <option value="">Select answer...</option>
-                <option value="SY">Yes, and the impact was substantial (SY)</option>
-                <option value="WY">Yes, but the impact was not substantial (WY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="participantsIncludedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="signalling-questions">
+            <h3>2.1 Intervention definition</h3>
+            
+            <div class="form-group">
+                <label>2.1.1 Was information used to define intervention groups recorded at the start of the intervention?
+                    <div class="help-text">
+                        If intervention groups are defined based on information collected at the time of intervention, answer Y/PY.
+                        If intervention groups are defined based on information collected after the intervention period, answer N/PN.
+                        If intervention groups are defined based on information that is updated or collected over time, answer N/PN.
+                    </div>
+                </label>
+                <select id="interventionTiming" name="interventionTiming" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="interventionTimingNotes" placeholder="Describe when intervention information was recorded..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>2.1.2 Was information used to define intervention groups based on split follow-up time or a specified time-varying intervention?
+                    <div class="help-text">
+                        If intervention status was defined by split follow-up time or a time-varying intervention (e.g., prescription of different drugs at different times), answer Y/PY.
+                        If intervention status was not based on split follow-up time or did not vary over time, answer N/PN.
+                    </div>
+                </label>
+                <select id="splitFollowup" name="splitFollowup" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="splitFollowupNotes" placeholder="Explain how intervention groups were defined..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="informationRecorded">2.3 Was all information used to classify intervention and comparator groups recorded at or before the time the interventions started?
-                <div class="help-text">
-                    Information that was collected after the interventions started may be influenced by the outcome or the risk of the outcome. Answer 'Y' or 'PY' if information was collected directly from records of prescriptions. Answer 'N' or 'PN' if participants were asked to recall past interventions.
-                </div>
-            </label>
-            <select id="informationRecorded" name="informationRecorded" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="informationRecordedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="classification-bias">
+            <h3>2.2 Classification bias</h3>
+
+            <div class="form-group">
+                <label>2.2.1 Were intervention groups clearly defined?
+                    <div class="help-text">
+                        Consider whether:
+                        - The intervention is sufficiently well described to enable classification
+                        - Criteria for belonging to intervention/comparator groups are unambiguous
+                        - Interventions reflect usual practice or the intended way of implementing them
+                    </div>
+                </label>
+                <select id="clearDefinition" name="clearDefinition" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="clearDefinitionNotes" placeholder="Describe how intervention groups were defined..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>2.2.2 Was the information used to define intervention groups recorded prior to the outcome?
+                    <div class="help-text">
+                        If information used to define intervention status was recorded after the outcome occurred, there is potential for bias. Even if intervention status was determined before the outcome, knowledge of the outcome might influence how intervention status was defined.
+                    </div>
+                </label>
+                <select id="priorDefinition" name="priorDefinition" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="priorDefinitionNotes" placeholder="Explain timing of intervention definition relative to outcome..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>2.2.3 Could classification of intervention status have been affected by knowledge of the outcome or risk of the outcome?
+                    <div class="help-text">
+                        Consider whether:
+                        - Outcome or risk of outcome could have influenced assignment to intervention/comparator
+                        - There was differential recall of intervention status based on outcome status
+                        - Intervention status could have been influenced by outcome assessment
+                    </div>
+                </label>
+                <select id="outcomeInfluence" name="outcomeInfluence" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="outcomeInfluenceNotes" placeholder="Describe potential influence of outcome on classification..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="classificationInfluenced">2.4 Was classification of intervention status influenced by knowledge of the outcome or risk of the outcome?
-                <div class="help-text">
-                    For example, if records of receipt of an intervention are destroyed if a participant dies (leading to misclassification of that participant into the comparator group) then analyses investigating the effect of the intervention on mortality will be biased. Answer 'SY' if the impact of knowledge of the outcome or risk of bias outcome was likely to be substantial.
-                </div>
-            </label>
-            <select id="classificationInfluenced" name="classificationInfluenced" required>
-                <option value="">Select answer...</option>
-                <option value="SY">Yes, and the impact was substantial (SY)</option>
-                <option value="WY">Yes, but the impact was not substantial (WY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="classificationInfluencedNotes" placeholder="Additional notes..." rows="2"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="classifiedCorrectly">2.5 Was intervention status classified correctly for all, or nearly all, participants?
-                <div class="help-text">
-                    This relates to non-differential misclassification of intervention status. Criteria for considering individuals to have received each intervention should be clear and explicit. "Nearly all" should be interpreted as "enough to be confident of the findings", typically 95% of participants. Misclassification errors usually bias the result towards the null.
-                </div>
-            </label>
-            <select id="classifiedCorrectly" name="classifiedCorrectly" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="WN">No, but the impact was not substantial (WN)</option>
-                <option value="SN">No, and the impact was substantial (SN)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="classifiedCorrectlyNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="risk-of-bias">
+            <h3>Risk of bias judgement</h3>
+            <div class="form-group">
+                <label>What is the risk of bias due to classification of interventions?
+                    <div class="help-text">
+                        Low: Intervention status is well defined and based solely on information collected at the time of intervention
+                        Moderate: Intervention status is well defined but some aspects of the assignments of intervention status were determined retrospectively
+                        Serious: Intervention status is not well defined, or major aspects of the assignments of intervention status were determined in a way that could have been affected by knowledge of the outcome
+                        Critical: (Unusual) Major problems with intervention definition, such as intervention status being unknown or misclassification being so extensive that it significantly distorted the results
+                        No information: No information on which to base a judgement about risk of bias for this domain
+                    </div>
+                </label>
+                <select id="biasRiskJudgement" name="biasRiskJudgement" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+                <textarea name="biasRiskJudgementNotes" placeholder="Provide rationale for risk of bias rating..." rows="3"></textarea>
+            </div>
         </div>
 
         <div id="bias2Result" class="assessment-result" style="display: none;">

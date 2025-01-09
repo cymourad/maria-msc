@@ -1,55 +1,147 @@
 <div id="bias4" class="tab-content">
-    <h2>Bias Due to Deviations from Intended Interventions</h2>
+    <h2>Domain 4: Bias Due to Deviations from Intended Interventions</h2>
+    
+    <div class="effect-type-selection">
+        <h3>Effect of Interest</h3>
+        <div class="form-group">
+            <label>Which effect of interest are you assessing?
+                <div class="help-text">
+                    Your selection will determine which set of questions to answer:
+                    - Effect of assignment: The effect of being assigned to intervention at baseline
+                    - Effect of adherence: The effect of starting and adhering to intervention as specified in the protocol
+                </div>
+            </label>
+            <select id="effectType" name="effectType" required>
+                <option value="">Select effect type...</option>
+                <option value="assignment">Effect of assignment to intervention</option>
+                <option value="adherence">Effect of starting and adhering to intervention</option>
+            </select>
+        </div>
+    </div>
+
     <form id="bias4Form" class="assessment-form">
-        <div class="form-group">
-            <label for="experimentalContext">4.1 Was the study undertaken in an experimental context?
-                <div class="help-text">
-                    When interest focuses on the effect of assignment to intervention, bias only arises if there are deviations that arose because the study was done in an experimental context. Examples include controlled trials that use methods other than randomization to allocate interventions, or studies where participants self-select to receive an intervention for the purposes of comparison.
-                </div>
-            </label>
-            <select id="experimentalContext" name="experimentalContext" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="experimentalContextNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <!-- Effect of Assignment Questions -->
+        <div id="assignmentQuestions" style="display: none;">
+            <h3>Questions for Effect of Assignment to Intervention</h3>
+            
+            <div class="form-group">
+                <label>4.1 Were there deviations from the intended intervention beyond what would be expected in usual practice?
+                    <div class="help-text">
+                        Consider whether deviations:
+                        - Arose because of the experimental context
+                        - Were beyond what would be expected in usual practice
+                        - Were balanced between groups
+                    </div>
+                </label>
+                <select id="usualPracticeDeviations" name="usualPracticeDeviations" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="usualPracticeDeviationsNotes" placeholder="Describe any deviations from usual practice..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>4.2 Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?
+                    <div class="help-text">
+                        Consider whether:
+                        - Deviations were different between groups
+                        - Deviations likely affected the outcome
+                        - The analysis accounted for these deviations
+                    </div>
+                </label>
+                <select id="unbalancedDeviations" name="unbalancedDeviations" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="unbalancedDeviationsNotes" placeholder="Describe impact of unbalanced deviations..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="participantDeviation">4.2 Did participants deviate from the intended intervention as a result of the processes of recruiting and engaging them in the study?
-                <div class="help-text">
-                    This refers to deviations that would not happen outside the experimental context. For example, participants in the comparator group might feel unlucky and seek the intervention. Answer 'Y' or 'PY' only if there is evidence that the processes of recruiting and engaging with study participants led to non-adherence that would not occur outside the study context.
-                </div>
-            </label>
-            <select id="participantDeviation" name="participantDeviation" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="participantDeviationNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <!-- Effect of Adherence Questions -->
+        <div id="adherenceQuestions" style="display: none;">
+            <h3>Questions for Effect of Starting and Adhering to Intervention</h3>
+
+            <div class="form-group">
+                <label>4.1 Were there deviations from the intended intervention?
+                    <div class="help-text">
+                        Consider:
+                        - Implementation or adherence failures
+                        - Co-intervention imbalances
+                        - Contamination between groups
+                        - Switching interventions
+                    </div>
+                </label>
+                <select id="interventionDeviations" name="interventionDeviations" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="interventionDeviationsNotes" placeholder="Describe any deviations..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>4.2 Was an appropriate analysis used to estimate the effect of starting and adhering to the intervention?
+                    <div class="help-text">
+                        Appropriate methods include:
+                        - Per-protocol analysis
+                        - Inverse probability weighting
+                        - G-methods
+                        - Instrumental variable methods
+                    </div>
+                </label>
+                <select id="analysisMethod" name="analysisMethod" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="analysisMethodNotes" placeholder="Describe analysis methods used..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="personnelDeviation">4.3 Did study personnel consciously or unconsciously undermine implementation of the intended interventions?
-                <div class="help-text">
-                    This refers to situations where study personnel undermine implementation in ways that would not happen outside the study context. Answer 'Y' or 'PY' only if there is evidence that actions of study personnel, driven by conscious or unconscious biases, led to failure to implement the specified intervention strategies in ways that would not occur outside the study.
-                </div>
-            </label>
-            <select id="personnelDeviation" name="personnelDeviation" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="personnelDeviationNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="risk-of-bias">
+            <h3>Risk of bias judgement</h3>
+            <div class="form-group">
+                <label>What is the risk of bias due to deviations from the intended interventions?
+                    <div class="help-text">
+                        For effect of assignment to intervention:
+                        Low: No or minimal deviations, or deviations balanced between groups
+                        Moderate: Deviations but probably did not impact the outcome
+                        Serious: Deviations likely to have affected the outcome
+                        Critical: Substantial deviations that critically affected results
+                        
+                        For effect of starting and adhering to intervention:
+                        Low: No deviations, or appropriate analysis used to estimate adherence effect
+                        Moderate: Deviations from intended intervention with appropriate analysis
+                        Serious: Major deviations without appropriate analysis
+                        Critical: Substantial deviations without appropriate analysis
+                        
+                        No information: No information about deviations or analysis methods
+                    </div>
+                </label>
+                <select id="biasRiskJudgement" name="biasRiskJudgement" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+                <textarea name="biasRiskJudgementNotes" placeholder="Provide rationale for risk of bias rating..." rows="3"></textarea>
+            </div>
         </div>
 
         <div id="bias4Result" class="assessment-result" style="display: none;">
@@ -59,3 +151,21 @@
         </div>
     </form>
 </div>
+
+<script>
+document.getElementById('effectType').addEventListener('change', function() {
+    var assignmentQuestions = document.getElementById('assignmentQuestions');
+    var adherenceQuestions = document.getElementById('adherenceQuestions');
+    
+    if (this.value === 'assignment') {
+        assignmentQuestions.style.display = 'block';
+        adherenceQuestions.style.display = 'none';
+    } else if (this.value === 'adherence') {
+        assignmentQuestions.style.display = 'none';
+        adherenceQuestions.style.display = 'block';
+    } else {
+        assignmentQuestions.style.display = 'none';
+        adherenceQuestions.style.display = 'none';
+    }
+});
+</script>

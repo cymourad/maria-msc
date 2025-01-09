@@ -1,72 +1,196 @@
 <div id="bias5" class="tab-content">
-    <h2>Bias Due to Deviations</h2>
+    <h2>Domain 5: Bias Due to Missing Data</h2>
     <form id="bias5Form" class="assessment-form">
-        <div class="form-group">
-            <label for="deviationsBalanced">5.1 Were there deviations from the intended intervention beyond what would be expected in usual practice?
-                <div class="help-text">
-                    "Nearly all" should be interpreted as "enough to be confident of the findings", and a suitable proportion depends on the context. In some situations, availability of data from 95% of participants may be sufficient, while in other situations, available data from 99% of participants may still be insufficient.
-                </div>
-            </label>
-            <select id="deviationsBalanced" name="deviationsBalanced" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="deviationsBalancedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="preliminary-considerations">
+            <h3>Preliminary considerations</h3>
+            <div class="form-group">
+                <label>Were outcome data available for all, or nearly all, participants?
+                    <div class="help-text">
+                        If Y/PY to this question, the study can be considered to be at low risk of bias due to missing data and no further signalling questions need be considered.
+                        "Nearly all" should be interpreted as "enough to be confident in the findings", typically 95% or more of participants.
+                    </div>
+                </label>
+                <select id="dataAvailable" name="dataAvailable" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="dataAvailableNotes" placeholder="Provide details about data availability..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="deviationsAffectOutcome">5.2 Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?
-                <div class="help-text">
-                    Missing intervention status may be a particular problem in retrospective studies using routine data sources. Consider both completely missing records and records for which intervention status could not be determined.
-                </div>
-            </label>
-            <select id="deviationsAffectOutcome" name="deviationsAffectOutcome" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="deviationsAffectOutcomeNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="signalling-questions">
+            <h3>5.1 Missing outcome data</h3>
+            
+            <div class="form-group">
+                <label>5.1.1 Were data for this outcome available for all, or nearly all, participants?
+                    <div class="help-text">
+                        Consider:
+                        - The proportion of participants with missing outcome data
+                        - Reasons for missing outcome data
+                        - Whether missing data were balanced across groups
+                    </div>
+                </label>
+                <select id="outcomeDataAvailable" name="outcomeDataAvailable" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="outcomeDataAvailableNotes" placeholder="Describe availability of outcome data..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>5.1.2 Are the proportions of missing outcome data and reasons for missing outcome data similar across intervention groups?
+                    <div class="help-text">
+                        Consider:
+                        - Whether reasons for missingness differ between groups
+                        - Whether missingness may be related to the outcome
+                        - Whether missingness patterns suggest differential loss to follow-up
+                    </div>
+                </label>
+                <select id="missingDataBalance" name="missingDataBalance" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="missingDataBalanceNotes" placeholder="Compare missing data across groups..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>5.1.3 Is there evidence that results were robust to the presence of missing outcome data?
+                    <div class="help-text">
+                        Consider whether:
+                        - Sensitivity analyses were conducted
+                        - Multiple imputation methods were used
+                        - Pattern-mixture models were applied
+                        - Other appropriate methods were used to assess robustness
+                    </div>
+                </label>
+                <select id="resultsRobust" name="resultsRobust" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="resultsRobustNotes" placeholder="Describe robustness analyses..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="deviationsReported">5.3 Were important co-interventions balanced across intervention groups?
-                <div class="help-text">
-                    This question refers to missing data on confounding variables and effect modifiers. Missing data on these variables can lead to selection bias if complete case analysis is used. Consider both completely missing records and records for which the required variables could not be determined.
-                </div>
-            </label>
-            <select id="deviationsReported" name="deviationsReported" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="deviationsReportedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="missing-participant-data">
+            <h3>5.2 Missing participant data</h3>
+
+            <div class="form-group">
+                <label>5.2.1 Were key participant characteristics available for all or nearly all participants?
+                    <div class="help-text">
+                        Consider availability of:
+                        - Baseline demographic data
+                        - Clinical characteristics
+                        - Prognostic factors
+                        - Confounding variables
+                    </div>
+                </label>
+                <select id="characteristicsAvailable" name="characteristicsAvailable" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="characteristicsAvailableNotes" placeholder="Describe availability of participant characteristics..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>5.2.2 Were there missing data for important participant characteristics?
+                    <div class="help-text">
+                        Consider:
+                        - The extent of missing data for key variables
+                        - Whether missingness may be related to true values
+                        - Whether missingness differs between intervention groups
+                    </div>
+                </label>
+                <select id="missingCharacteristics" name="missingCharacteristics" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="missingCharacteristicsNotes" placeholder="Describe missing participant characteristics..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>5.2.3 Were appropriate statistical methods used to account for missing participant data?
+                    <div class="help-text">
+                        Consider whether:
+                        - Multiple imputation was used appropriately
+                        - Complete case analysis was justified
+                        - Appropriate sensitivity analyses were conducted
+                        - Missing data mechanisms were assessed
+                    </div>
+                </label>
+                <select id="statisticalMethods" name="statisticalMethods" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="statisticalMethodsNotes" placeholder="Describe statistical methods used..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="appropriateAnalysis">5.4 Was the intervention implemented successfully for most participants?
-                <div class="help-text">
-                    Different patterns of missing data across intervention groups may indicate systematic differences in study conduct or participant characteristics that could lead to bias. Consider both the proportions of missing data and the reasons for missingness.
-                </div>
-            </label>
-            <select id="appropriateAnalysis" name="appropriateAnalysis" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="appropriateAnalysisNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="risk-of-bias">
+            <h3>Risk of bias judgement</h3>
+            <div class="form-group">
+                <label>What is the risk of bias due to missing data?
+                    <div class="help-text">
+                        Low: (Any one of the following)
+                        - No missing outcome data
+                        - Reasons for missing outcome data similar across groups
+                        - Missing outcome data balanced across groups AND missingness unrelated to outcome
+                        - Appropriate analysis used to account for missing data
+                        
+                        Moderate: (Any one of the following)
+                        - Reasons for missingness differ somewhat between groups
+                        - Missingness may depend on the true value
+                        - Some appropriate analysis to account for missing data
+                        
+                        Serious: (Any one of the following)
+                        - Reasons for missingness differ substantially between groups
+                        - Missingness likely depends on true value
+                        - Inappropriate analysis of missing data
+                        
+                        Critical: (Any one of the following)
+                        - Differential missingness that clearly biases results
+                        - Missing data mechanisms make reliable analysis impossible
+                        
+                        No information: No information about missing data or analysis methods
+                    </div>
+                </label>
+                <select id="biasRiskJudgement" name="biasRiskJudgement" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+                <textarea name="biasRiskJudgementNotes" placeholder="Provide rationale for risk of bias rating..." rows="3"></textarea>
+            </div>
         </div>
 
         <div id="bias5Result" class="assessment-result" style="display: none;">

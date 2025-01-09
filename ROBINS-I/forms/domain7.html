@@ -1,59 +1,86 @@
 <div id="bias7" class="tab-content">
-    <h2>Overall Risk of Bias</h2>
+    <h2>Domain 7: Bias in Selection of the Reported Result</h2>
     <form id="bias7Form" class="assessment-form">
-        <div class="domain-summary">
-            <h3>Summary of Domain Assessments</h3>
-            <div class="domain-risks">
-                <div class="domain-risk">
-                    <label>Domain 1: Confounding</label>
-                    <span class="risk-badge" id="domain1Risk">Not Assessed</span>
-                </div>
-                <div class="domain-risk">
-                    <label>Domain 2: Selection</label>
-                    <span class="risk-badge" id="domain2Risk">Not Assessed</span>
-                </div>
-                <div class="domain-risk">
-                    <label>Domain 3: Missing Data</label>
-                    <span class="risk-badge" id="domain3Risk">Not Assessed</span>
-                </div>
-                <div class="domain-risk">
-                    <label>Domain 4: Measurement</label>
-                    <span class="risk-badge" id="domain4Risk">Not Assessed</span>
-                </div>
-                <div class="domain-risk">
-                    <label>Domain 5: Deviations</label>
-                    <span class="risk-badge" id="domain5Risk">Not Assessed</span>
-                </div>
-                <div class="domain-risk">
-                    <label>Domain 6: Reporting</label>
-                    <span class="risk-badge" id="domain6Risk">Not Assessed</span>
-                </div>
-                <div class="domain-risk">
-                    <label>Domain 7: Bias in Selection of the Reported Result</label>
-                    <span class="risk-badge" id="domain7Risk">Not Assessed</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="overall-assessment">
-            <h3>Overall Risk of Bias Assessment</h3>
-            <div id="overallRiskResult" class="assessment-result">
-                <p class="risk-level">Not yet assessed</p>
-                <p class="rationale"></p>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="assessorNotes">Additional Notes:</label>
-            <textarea id="assessorNotes" name="assessorNotes" rows="4" placeholder="Enter any additional notes about the overall assessment..."></textarea>
-        </div>
-
-        <div class="domain-assessment">
-            <h2>Bias in Selection of the Reported Result</h2>
+        <div class="preliminary-considerations">
+            <h3>Preliminary considerations</h3>
             <div class="form-group">
-                <label for="multipleAnalyses">7.1 Were multiple outcome measurements within the outcome domain available for selection?
+                <label>Was the study protocol or statistical analysis plan available?
                     <div class="help-text">
-                        Consider whether the researchers had the opportunity to select from multiple outcome measurements within the outcome domain. For example, they might have had multiple ways to measure blood pressure or could have measured quality of life using different scales.
+                        If Y/PY to this question and all reported results correspond to the protocol/analysis plan, the study can be considered at low risk of bias due to selection of reported results.
+                        Consider:
+                        - Pre-specified primary and secondary outcomes
+                        - Pre-specified analysis methods
+                        - Timing of outcome measurements
+                    </div>
+                </label>
+                <select id="protocolAvailable" name="protocolAvailable" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="protocolAvailableNotes" placeholder="Describe availability of protocol/analysis plan..." rows="2"></textarea>
+            </div>
+        </div>
+
+        <div class="measurement-timing">
+            <h3>7.1 Multiple outcome measurements</h3>
+            
+            <div class="form-group">
+                <label>7.1.1 Were multiple outcome measurements within the outcome domain available?
+                    <div class="help-text">
+                        Consider whether:
+                        - Multiple time points were available
+                        - Multiple outcome measures/scales were used
+                        - Multiple analyses were performed
+                        - Multiple cut-points were used for categorizing outcomes
+                    </div>
+                </label>
+                <select id="multipleOutcomes" name="multipleOutcomes" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="multipleOutcomesNotes" placeholder="Describe available outcome measurements..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>7.1.2 Were all reported results corresponding to intended outcome measurements pre-specified?
+                    <div class="help-text">
+                        Consider whether:
+                        - Outcome measurements were pre-specified in protocol/analysis plan
+                        - Changes to planned measurements were justified
+                        - Selection of reported results was based on observed data
+                    </div>
+                </label>
+                <select id="preSpecified" name="preSpecified" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="preSpecifiedNotes" placeholder="Describe pre-specification of measurements..." rows="2"></textarea>
+            </div>
+        </div>
+
+        <div class="analysis-methods">
+            <h3>7.2 Multiple analyses</h3>
+
+            <div class="form-group">
+                <label>7.2.1 Were there multiple analyses of the intervention-outcome relationship?
+                    <div class="help-text">
+                        Consider whether multiple analyses were performed using:
+                        - Different statistical models
+                        - Different sets of covariates
+                        - Different subgroups
+                        - Different ways of handling missing data
                     </div>
                 </label>
                 <select id="multipleAnalyses" name="multipleAnalyses" required>
@@ -64,16 +91,20 @@
                     <option value="N">No (N)</option>
                     <option value="NI">No Information (NI)</option>
                 </select>
-                <textarea name="multipleAnalysesNotes" placeholder="Additional notes..." rows="2"></textarea>
+                <textarea name="multipleAnalysesNotes" placeholder="Describe multiple analyses performed..." rows="2"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="multipleAnalysisApproaches">7.2 Were multiple analyses of the intervention-outcome relationship carried out?
+                <label>7.2.2 Were all reported analyses pre-specified?
                     <div class="help-text">
-                        Consider whether researchers conducted multiple analyses using different statistical approaches or subgroups. Examples include analyses that adjust for different covariates, or analyses restricted to certain time periods or participant subgroups.
+                        Consider:
+                        - Whether analyses were pre-specified in protocol/analysis plan
+                        - Whether any reported analyses were data-driven
+                        - Whether selection of analysis method was influenced by results
+                        - Whether subgroup analyses were pre-specified
                     </div>
                 </label>
-                <select id="multipleAnalysisApproaches" name="multipleAnalysisApproaches" required>
+                <select id="analysesPreSpecified" name="analysesPreSpecified" required>
                     <option value="">Select answer...</option>
                     <option value="Y">Yes (Y)</option>
                     <option value="PY">Probably Yes (PY)</option>
@@ -81,16 +112,23 @@
                     <option value="N">No (N)</option>
                     <option value="NI">No Information (NI)</option>
                 </select>
-                <textarea name="multipleAnalysisApproachesNotes" placeholder="Additional notes..." rows="2"></textarea>
+                <textarea name="analysesPreSpecifiedNotes" placeholder="Describe pre-specification of analyses..." rows="2"></textarea>
             </div>
+        </div>
+
+        <div class="subgroup-analyses">
+            <h3>7.3 Subgroup analyses</h3>
 
             <div class="form-group">
-                <label for="reportingBased">7.3 Was selection of the reported result based on findings?
+                <label>7.3.1 Were subgroup analyses reported?
                     <div class="help-text">
-                        Consider whether there is evidence that the choice of which analyses or results to report was based on the findings and would likely have been different if the results had been different. Look for evidence of pre-specified analyses plans and selective reporting of results.
+                        Consider whether:
+                        - Results were reported for different subgroups
+                        - Interaction tests were performed
+                        - Stratified analyses were conducted
                     </div>
                 </label>
-                <select id="reportingBased" name="reportingBased" required>
+                <select id="subgroupReported" name="subgroupReported" required>
                     <option value="">Select answer...</option>
                     <option value="Y">Yes (Y)</option>
                     <option value="PY">Probably Yes (PY)</option>
@@ -98,14 +136,71 @@
                     <option value="N">No (N)</option>
                     <option value="NI">No Information (NI)</option>
                 </select>
-                <textarea name="reportingBasedNotes" placeholder="Additional notes..." rows="2"></textarea>
+                <textarea name="subgroupReportedNotes" placeholder="Describe reported subgroup analyses..." rows="2"></textarea>
             </div>
 
-            <div id="bias7Result" class="assessment-result" style="display: none;">
-                <h3>Domain Assessment Result</h3>
-                <p class="risk-level"></p>
-                <p class="rationale"></p>
+            <div class="form-group">
+                <label>7.3.2 Were subgroup analyses pre-specified?
+                    <div class="help-text">
+                        Consider:
+                        - Whether subgroups were defined in protocol/analysis plan
+                        - Whether selection of reported subgroups was influenced by results
+                        - Whether there was appropriate statistical handling of multiple testing
+                    </div>
+                </label>
+                <select id="subgroupPreSpecified" name="subgroupPreSpecified" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="subgroupPreSpecifiedNotes" placeholder="Describe pre-specification of subgroups..." rows="2"></textarea>
             </div>
+        </div>
+
+        <div class="risk-of-bias">
+            <h3>Risk of bias judgement</h3>
+            <div class="form-group">
+                <label>What is the risk of bias due to selection of the reported result?
+                    <div class="help-text">
+                        Low: (Any one of the following)
+                        - All reported results correspond to pre-specified measurements/analyses
+                        - Any deviations from protocol are justified and unlikely to have been selected based on results
+                        
+                        Moderate: (Any one of the following)
+                        - Some concern about selection of reported results from multiple measurements/analyses
+                        - Insufficient information about pre-specification of measurements/analyses
+                        
+                        Serious: (Any one of the following)
+                        - Likely that reported results were selected from multiple measurements/analyses based on results
+                        - Multiple unreported measurements/analyses likely exist
+                        - Selection of cohort or subgroup likely based on results
+                        
+                        Critical: (Any one of the following)
+                        - Strong evidence of selective reporting based on results
+                        - Strong evidence that results were selected from multiple measurements/analyses
+                        
+                        No information: No information about whether measurements/analyses were pre-specified
+                    </div>
+                </label>
+                <select id="biasRiskJudgement" name="biasRiskJudgement" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+                <textarea name="biasRiskJudgementNotes" placeholder="Provide rationale for risk of bias rating..." rows="3"></textarea>
+            </div>
+        </div>
+
+        <div id="bias7Result" class="assessment-result" style="display: none;">
+            <h3>Domain Assessment Result</h3>
+            <p class="risk-level"></p>
+            <p class="rationale"></p>
         </div>
     </form>
 </div>

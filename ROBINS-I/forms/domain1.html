@@ -1,89 +1,201 @@
 <div id="bias1" class="tab-content">
-    <h2>Bias Due to Confounding</h2>
+    <h2>Domain 1: Bias Due to Confounding</h2>
     <form id="bias1Form" class="assessment-form">
-        <div class="form-group">
-            <label for="criticalConfounders">1.1 Is there potential for confounding of the effect of intervention in this study?
-                <div class="help-text">
-                    A confounding factor is a prognostic factor that predicts the interventions received. Important confounding factors are those that have the potential to introduce material bias into an estimated effect. Consider factors that are expected to have strong associations with both the intervention and the outcome.
-                </div>
-            </label>
-            <select id="criticalConfounders" name="criticalConfounders" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="criticalConfoundersNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="preliminary-considerations">
+            <h3>Preliminary considerations</h3>
+            <div class="form-group">
+                <label>Is confounding of the effect of intervention unlikely in this study?
+                    <div class="help-text">
+                        If Y/PY to all: the study can be considered to be at low risk of bias due to confounding and no further signalling questions need be considered
+                    </div>
+                </label>
+                <select id="confoundingUnlikely" name="confoundingUnlikely" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="confoundingUnlikelyNotes" placeholder="Provide rationale for your answer..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="confoundersAppropriatelyMeasured">1.2 Was the analysis based on splitting participants' follow up time according to intervention received?
-                <div class="help-text">
-                    This question helps determine if time-varying confounding needs to be examined. If participants could switch between intervention groups, then associations between intervention and outcome may be biased by time-varying confounding. For example, in a study of antiretroviral therapy (ART) on AIDS rates, if CD4 counts during follow-up influenced the decision to start ART, CD4 count was a time-varying confounder.
-                </div>
-            </label>
-            <select id="confoundersAppropriatelyMeasured" name="confoundersAppropriatelyMeasured" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="confoundersAppropriatelyMeasuredNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="signalling-questions">
+            <h3>1.1 Baseline confounding</h3>
+            
+            <div class="form-group">
+                <label>1.1.1 Is there potential for confounding of the effect of intervention in this study?
+                    <div class="help-text">
+                        If N/PN to 1.1.1: the study can be considered to be at low risk of bias due to confounding and no further signalling questions need be considered.
+                        
+                        In rare situations, such as when studying harms that are very unlikely to be related to factors that influence treatment decisions, no confounding is expected and the study can be considered to be at low risk of bias due to confounding, equivalent to a fully randomized trial.
+                    </div>
+                </label>
+                <select id="potentialConfounding" name="potentialConfounding" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="potentialConfoundingNotes" placeholder="List the potential confounding domains..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>1.1.2 Were participants analysed according to their initial intervention group throughout follow up?
+                    <div class="help-text">
+                        If Y/PY to 1.1.2, answer questions relating to baseline confounding (1.1.3 to 1.1.6).
+                        If N/PN, proceed to answer questions relating to both baseline and time-varying confounding (1.1.3 to 1.1.12).
+                    </div>
+                </label>
+                <select id="initialGroupAnalysis" name="initialGroupAnalysis" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="initialGroupAnalysisNotes" placeholder="Explain how participants were analyzed..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>1.1.3 Did the authors use an appropriate analysis method that controlled for all the important confounding domains?
+                    <div class="help-text">
+                        Appropriate methods include:
+                        - Randomization
+                        - Stratification
+                        - Regression adjustment
+                        - Inverse probability weighting
+                        - Matching
+                    </div>
+                </label>
+                <select id="appropriateAnalysis" name="appropriateAnalysis" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="appropriateAnalysisNotes" placeholder="Describe the analysis methods used..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>1.1.4 Were confounding domains that were controlled for measured validly and reliably by the variables available in this study?
+                    <div class="help-text">
+                        Consider whether:
+                        - Clear and consistent definitions were used
+                        - Variables were measured using reliable methods
+                        - Levels or categories were appropriate
+                        - Measurement error was likely to be non-differential
+                    </div>
+                </label>
+                <select id="validMeasurement" name="validMeasurement" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="validMeasurementNotes" placeholder="Describe how confounding domains were measured..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>1.1.5 Did the authors control for any post-intervention variables that could have been affected by the intervention?
+                    <div class="help-text">
+                        Controlling for post-intervention variables that are affected by intervention is not appropriate. Controlling for mediating variables estimates the direct effect of intervention and may introduce bias.
+                        
+                        Controlling for common effects of intervention and outcome introduces bias.
+                    </div>
+                </label>
+                <select id="postInterventionControl" name="postInterventionControl" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="postInterventionControlNotes" placeholder="List any post-intervention variables that were controlled for..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="confoundersBalanced">1.3 Were intervention discontinuations or switches likely to be related to factors that are prognostic for the outcome?
-                <div class="help-text">
-                    This question helps assess if there is time-varying confounding that needs to be addressed in the analysis. Consider whether changes in intervention status during follow-up were influenced by factors that also predict the outcome.
-                </div>
-            </label>
-            <select id="confoundersBalanced" name="confoundersBalanced" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="confoundersBalancedNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="time-varying-confounding" id="timeVaryingSection" style="display: none;">
+            <h3>1.2 Time-varying confounding</h3>
+            <div class="help-text">
+                Complete this section if participants could switch between intervention groups and time-varying confounding might be present
+            </div>
+
+            <div class="form-group">
+                <label>1.2.1 Did the authors use an appropriate analysis method that adjusted for time-varying confounding, if present?
+                    <div class="help-text">
+                        Appropriate methods include:
+                        - Marginal structural models
+                        - G-estimation
+                        - G-computation
+                        - Other methods that estimate the effect of starting and adhering to intervention
+                    </div>
+                </label>
+                <select id="timeVaryingAnalysis" name="timeVaryingAnalysis" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                    <option value="NA">Not Applicable (NA)</option>
+                </select>
+                <textarea name="timeVaryingAnalysisNotes" placeholder="Describe the methods used to adjust for time-varying confounding..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>1.2.2 Were time-varying confounding domains that were adjusted for measured validly and reliably by the variables available in this study?
+                    <div class="help-text">
+                        Consider whether the measurements of time-varying confounders were:
+                        - Close enough in time to the decisions about intervention status
+                        - Reliable and valid when measured at follow-up
+                        - Complete for all or nearly all participants
+                    </div>
+                </label>
+                <select id="timeVaryingMeasurement" name="timeVaryingMeasurement" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                    <option value="NA">Not Applicable (NA)</option>
+                </select>
+                <textarea name="timeVaryingMeasurementNotes" placeholder="Describe how time-varying confounders were measured..." rows="2"></textarea>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="interventionDiscontinuation">1.4 Did the authors use an appropriate analysis method that controlled for all the important confounding domains?
-                <div class="help-text">
-                    Consider whether the method of analysis was adequate to control for important confounding factors. Appropriate methods might include regression adjustment, stratification, matching, weighting, or instrumental variable methods. The analysis should control for both baseline and time-varying confounding if relevant.
-                </div>
-            </label>
-            <select id="interventionDiscontinuation" name="interventionDiscontinuation" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="interventionDiscontinuationNotes" placeholder="Additional notes..." rows="2"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="appropriateAnalysis">1.5 Were confounding domains that were controlled for measured validly and reliably by the variables available in this study?
-                <div class="help-text">
-                    Appropriate measurement requires that: (1) The variables are clearly defined; (2) The methods of measurement are valid and reliable; (3) The timing of measurement was appropriate; and (4) The methods and setting of measurement were consistent across intervention groups.
-                </div>
-            </label>
-            <select id="appropriateAnalysis" name="appropriateAnalysis" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="appropriateAnalysisNotes" placeholder="Additional notes..." rows="2"></textarea>
+        <div class="risk-of-bias">
+            <h3>Risk of bias judgement</h3>
+            <div class="form-group">
+                <label>What is the risk of bias due to confounding?
+                    <div class="help-text">
+                        Low: Confounding expected, all known important confounding domains appropriately measured and controlled for;
+                        Moderate: Confounding expected, most important confounding domains appropriately measured and controlled for;
+                        Serious: At least one known important domain was not appropriately measured, or not controlled for;
+                        Critical: Confounding inherently not controllable, or use of negative control yielded implausible results;
+                        No information: No information on whether confounding might be present
+                    </div>
+                </label>
+                <select id="biasRiskJudgement" name="biasRiskJudgement" required>
+                    <option value="">Select risk level...</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="serious">Serious</option>
+                    <option value="critical">Critical</option>
+                    <option value="ni">No information</option>
+                </select>
+                <textarea name="biasRiskJudgementNotes" placeholder="Provide rationale for risk of bias rating..." rows="3"></textarea>
+            </div>
         </div>
 
         <div id="bias1Result" class="assessment-result" style="display: none;">
@@ -93,3 +205,17 @@
         </div>
     </form>
 </div>
+
+<script>
+document.getElementById('initialGroupAnalysis').addEventListener('change', function() {
+    var timeVaryingSection = document.getElementById('timeVaryingSection');
+    var value = this.value;
+    
+    // Show time-varying confounding section if N/PN
+    if (value === 'N' || value === 'PN') {
+        timeVaryingSection.style.display = 'block';
+    } else {
+        timeVaryingSection.style.display = 'none';
+    }
+});
+</script>
