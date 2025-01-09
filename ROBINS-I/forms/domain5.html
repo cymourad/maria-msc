@@ -2,7 +2,11 @@
     <h2>Bias Due to Deviations</h2>
     <form id="bias5Form" class="assessment-form">
         <div class="form-group">
-            <label for="deviationsBalanced">5.1 Were there deviations from the intended intervention beyond what would be expected in usual practice?</label>
+            <label for="deviationsBalanced">5.1 Were there deviations from the intended intervention beyond what would be expected in usual practice?
+                <div class="help-text">
+                    "Nearly all" should be interpreted as "enough to be confident of the findings", and a suitable proportion depends on the context. In some situations, availability of data from 95% of participants may be sufficient, while in other situations, available data from 99% of participants may still be insufficient.
+                </div>
+            </label>
             <select id="deviationsBalanced" name="deviationsBalanced" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
@@ -15,7 +19,11 @@
         </div>
 
         <div class="form-group">
-            <label for="deviationsAffectOutcome">5.2 Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?</label>
+            <label for="deviationsAffectOutcome">5.2 Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?
+                <div class="help-text">
+                    Missing intervention status may be a particular problem in retrospective studies using routine data sources. Consider both completely missing records and records for which intervention status could not be determined.
+                </div>
+            </label>
             <select id="deviationsAffectOutcome" name="deviationsAffectOutcome" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
@@ -28,7 +36,11 @@
         </div>
 
         <div class="form-group">
-            <label for="deviationsReported">5.3 Were important co-interventions balanced across intervention groups?</label>
+            <label for="deviationsReported">5.3 Were important co-interventions balanced across intervention groups?
+                <div class="help-text">
+                    This question refers to missing data on confounding variables and effect modifiers. Missing data on these variables can lead to selection bias if complete case analysis is used. Consider both completely missing records and records for which the required variables could not be determined.
+                </div>
+            </label>
             <select id="deviationsReported" name="deviationsReported" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
@@ -41,7 +53,11 @@
         </div>
 
         <div class="form-group">
-            <label for="appropriateAnalysis">5.4 Was the intervention implemented successfully for most participants?</label>
+            <label for="appropriateAnalysis">5.4 Was the intervention implemented successfully for most participants?
+                <div class="help-text">
+                    Different patterns of missing data across intervention groups may indicate systematic differences in study conduct or participant characteristics that could lead to bias. Consider both the proportions of missing data and the reasons for missingness.
+                </div>
+            </label>
             <select id="appropriateAnalysis" name="appropriateAnalysis" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>

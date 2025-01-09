@@ -1,27 +1,131 @@
-<div id="general" class="tab-content active">
+<div id="general" class="tab-content">
     <h2>General Information</h2>
     <form id="generalForm" class="assessment-form">
-        <div class="form-group">
-            <label for="studyTitle">Study Title:</label>
-            <input type="text" id="studyTitle" name="studyTitle" required>
+        <!-- Section A: Study Design -->
+        <div class="form-section">
+            <h3>A. Study Design</h3>
+            <div class="form-group">
+                <label for="studyDesign">A.1 What type of study design was used?
+                    <div class="help-text">
+                        Select the study design that best describes the research. Consider whether it was individually or cluster allocated, and whether it used parallel groups, cross-over, or other designs.
+                    </div>
+                </label>
+                <select id="studyDesign" name="studyDesign" required>
+                    <option value="">Select study design...</option>
+                    <option value="cohort">Cohort study</option>
+                    <option value="case-control">Case-control study</option>
+                    <option value="controlled-before-after">Controlled before-after study</option>
+                    <option value="interrupted-time">Interrupted time series</option>
+                    <option value="other">Other design</option>
+                </select>
+                <textarea name="studyDesignNotes" placeholder="Additional details about study design..." rows="2"></textarea>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="authors">Authors:</label>
-            <input type="text" id="authors" name="authors" required>
+
+        <!-- Section B: Aim of Study -->
+        <div class="form-section">
+            <h3>B. Aim of Study</h3>
+            <div class="form-group">
+                <label for="studyAim">B.1 What was the objective of the study?
+                    <div class="help-text">
+                        Describe the study's aim to assess the effect of starting and adhering to an intervention (sometimes called the 'per-protocol' effect) or the effect of being assigned to an intervention (sometimes called the 'intention-to-treat' effect).
+                    </div>
+                </label>
+                <select id="studyAim" name="studyAim" required>
+                    <option value="">Select study aim...</option>
+                    <option value="per-protocol">To assess the effect of starting and adhering to intervention (per-protocol)</option>
+                    <option value="intention-to-treat">To assess the effect of assignment to intervention (intention-to-treat)</option>
+                    <option value="other">Other aim</option>
+                </select>
+                <textarea name="studyAimNotes" placeholder="Additional details about study aim..." rows="2"></textarea>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="publicationYear">Publication Year:</label>
-            <input type="number" id="publicationYear" name="publicationYear" required>
+
+        <!-- Section C: Population -->
+        <div class="form-section">
+            <h3>C. Population</h3>
+            <div class="form-group">
+                <label for="populationDescription">C.1 What are the eligibility criteria for study participants?
+                    <div class="help-text">
+                        Describe the setting, locations, and relevant dates, including periods of recruitment, exposure, follow-up, and data collection. Include key characteristics of study participants.
+                    </div>
+                </label>
+                <textarea id="populationDescription" name="populationDescription" rows="3" placeholder="Describe population eligibility criteria..." required></textarea>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="studyDesign">Study Design:</label>
-            <select id="studyDesign" name="studyDesign" required>
-                <option value="">Select study design...</option>
-                <option value="cohort">Cohort Study</option>
-                <option value="caseControl">Case-Control Study</option>
-                <option value="crossSectional">Cross-sectional Study</option>
-                <option value="other">Other</option>
-            </select>
+
+        <!-- Section D: Intervention -->
+        <div class="form-section">
+            <h3>D. Intervention</h3>
+            <div class="form-group">
+                <label for="interventionDetails">D.1 Provide details of the experimental intervention
+                    <div class="help-text">
+                        Include sufficient details of the intervention and how it was implemented. Describe the intervention's goals and how it was intended to work.
+                    </div>
+                </label>
+                <textarea id="interventionDetails" name="interventionDetails" rows="3" placeholder="Describe intervention details..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comparatorDetails">D.2 Provide details of the comparator
+                    <div class="help-text">
+                        Describe what the intervention was compared with. This could be no intervention, usual care, or an alternative intervention.
+                    </div>
+                </label>
+                <textarea id="comparatorDetails" name="comparatorDetails" rows="3" placeholder="Describe comparator details..." required></textarea>
+            </div>
+        </div>
+
+        <!-- Section E: Outcomes -->
+        <div class="form-section">
+            <h3>E. Outcomes</h3>
+            <div class="form-group">
+                <label for="outcomeDetails">E.1 Define the outcome(s) under study
+                    <div class="help-text">
+                        List all outcomes that were measured in the study. Specify the pre-defined primary and secondary outcomes, if applicable. Include details of how and when they were measured.
+                    </div>
+                </label>
+                <textarea id="outcomeDetails" name="outcomeDetails" rows="3" placeholder="Describe outcome details..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="outcomeType">E.2 What is the type of outcome?</label>
+                <select id="outcomeType" name="outcomeType" required>
+                    <option value="">Select outcome type...</option>
+                    <option value="continuous">Continuous</option>
+                    <option value="dichotomous">Dichotomous</option>
+                    <option value="count">Count</option>
+                    <option value="time-to-event">Time-to-event</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section F: Confounding -->
+        <div class="form-section">
+            <h3>F. Confounding</h3>
+            <div class="form-group">
+                <label for="confoundingDomains">F.1 List the key confounding domains
+                    <div class="help-text">
+                        List the key variables that could influence both whether an individual receives the intervention and their outcomes. Consider baseline characteristics, pre-intervention variables, and post-intervention variables that are not affected by the intervention.
+                    </div>
+                </label>
+                <textarea id="confoundingDomains" name="confoundingDomains" rows="3" placeholder="List confounding domains..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="coInterventions">F.2 List co-interventions that could be different between intervention groups
+                    <div class="help-text">
+                        Describe any additional interventions or treatments that some participants might have received, which could have affected the outcome and been received differently by different intervention groups.
+                    </div>
+                </label>
+                <textarea id="coInterventions" name="coInterventions" rows="3" placeholder="List co-interventions..." required></textarea>
+            </div>
+        </div>
+
+        <div id="generalResult" class="assessment-result" style="display: none;">
+            <h3>General Information Summary</h3>
+            <p class="summary"></p>
         </div>
     </form>
 </div>

@@ -1,9 +1,13 @@
 <div id="bias4" class="tab-content">
-    <h2>Bias in Measurement of Outcomes</h2>
+    <h2>Bias Due to Deviations from Intended Interventions</h2>
     <form id="bias4Form" class="assessment-form">
         <div class="form-group">
-            <label for="methodsAppropriate">4.1 Was the method of measuring the outcome appropriate?</label>
-            <select id="methodsAppropriate" name="methodsAppropriate" required>
+            <label for="experimentalContext">4.1 Was the study undertaken in an experimental context?
+                <div class="help-text">
+                    When interest focuses on the effect of assignment to intervention, bias only arises if there are deviations that arose because the study was done in an experimental context. Examples include controlled trials that use methods other than randomization to allocate interventions, or studies where participants self-select to receive an intervention for the purposes of comparison.
+                </div>
+            </label>
+            <select id="experimentalContext" name="experimentalContext" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -11,12 +15,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="methodsAppropriateNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="experimentalContextNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="differentialMeasurement">4.2 Could differences between intervention groups in how the outcome was measured have led to bias?</label>
-            <select id="differentialMeasurement" name="differentialMeasurement" required>
+            <label for="participantDeviation">4.2 Did participants deviate from the intended intervention as a result of the processes of recruiting and engaging them in the study?
+                <div class="help-text">
+                    This refers to deviations that would not happen outside the experimental context. For example, participants in the comparator group might feel unlucky and seek the intervention. Answer 'Y' or 'PY' only if there is evidence that the processes of recruiting and engaging with study participants led to non-adherence that would not occur outside the study context.
+                </div>
+            </label>
+            <select id="participantDeviation" name="participantDeviation" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -24,12 +32,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="differentialMeasurementNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="participantDeviationNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="assessorsBlinded">4.3 Were outcome assessors aware of the intervention received by study participants?</label>
-            <select id="assessorsBlinded" name="assessorsBlinded" required>
+            <label for="personnelDeviation">4.3 Did study personnel consciously or unconsciously undermine implementation of the intended interventions?
+                <div class="help-text">
+                    This refers to situations where study personnel undermine implementation in ways that would not happen outside the study context. Answer 'Y' or 'PY' only if there is evidence that actions of study personnel, driven by conscious or unconscious biases, led to failure to implement the specified intervention strategies in ways that would not occur outside the study.
+                </div>
+            </label>
+            <select id="personnelDeviation" name="personnelDeviation" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -37,20 +49,7 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="assessorsBlindedNotes" placeholder="Additional notes..." rows="2"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="errorSystematic">4.4 Could assessment of the outcome have been influenced by knowledge of the intervention received?</label>
-            <select id="errorSystematic" name="errorSystematic" required>
-                <option value="">Select answer...</option>
-                <option value="Y">Yes (Y)</option>
-                <option value="PY">Probably Yes (PY)</option>
-                <option value="PN">Probably No (PN)</option>
-                <option value="N">No (N)</option>
-                <option value="NI">No Information (NI)</option>
-            </select>
-            <textarea name="errorSystematicNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="personnelDeviationNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div id="bias4Result" class="assessment-result" style="display: none;">

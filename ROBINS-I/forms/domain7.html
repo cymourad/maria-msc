@@ -28,6 +28,10 @@
                     <label>Domain 6: Reporting</label>
                     <span class="risk-badge" id="domain6Risk">Not Assessed</span>
                 </div>
+                <div class="domain-risk">
+                    <label>Domain 7: Bias in Selection of the Reported Result</label>
+                    <span class="risk-badge" id="domain7Risk">Not Assessed</span>
+                </div>
             </div>
         </div>
 
@@ -42,6 +46,66 @@
         <div class="form-group">
             <label for="assessorNotes">Additional Notes:</label>
             <textarea id="assessorNotes" name="assessorNotes" rows="4" placeholder="Enter any additional notes about the overall assessment..."></textarea>
+        </div>
+
+        <div class="domain-assessment">
+            <h2>Bias in Selection of the Reported Result</h2>
+            <div class="form-group">
+                <label for="multipleAnalyses">7.1 Were multiple outcome measurements within the outcome domain available for selection?
+                    <div class="help-text">
+                        Consider whether the researchers had the opportunity to select from multiple outcome measurements within the outcome domain. For example, they might have had multiple ways to measure blood pressure or could have measured quality of life using different scales.
+                    </div>
+                </label>
+                <select id="multipleAnalyses" name="multipleAnalyses" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="multipleAnalysesNotes" placeholder="Additional notes..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="multipleAnalysisApproaches">7.2 Were multiple analyses of the intervention-outcome relationship carried out?
+                    <div class="help-text">
+                        Consider whether researchers conducted multiple analyses using different statistical approaches or subgroups. Examples include analyses that adjust for different covariates, or analyses restricted to certain time periods or participant subgroups.
+                    </div>
+                </label>
+                <select id="multipleAnalysisApproaches" name="multipleAnalysisApproaches" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="multipleAnalysisApproachesNotes" placeholder="Additional notes..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="reportingBased">7.3 Was selection of the reported result based on findings?
+                    <div class="help-text">
+                        Consider whether there is evidence that the choice of which analyses or results to report was based on the findings and would likely have been different if the results had been different. Look for evidence of pre-specified analyses plans and selective reporting of results.
+                    </div>
+                </label>
+                <select id="reportingBased" name="reportingBased" required>
+                    <option value="">Select answer...</option>
+                    <option value="Y">Yes (Y)</option>
+                    <option value="PY">Probably Yes (PY)</option>
+                    <option value="PN">Probably No (PN)</option>
+                    <option value="N">No (N)</option>
+                    <option value="NI">No Information (NI)</option>
+                </select>
+                <textarea name="reportingBasedNotes" placeholder="Additional notes..." rows="2"></textarea>
+            </div>
+
+            <div id="bias7Result" class="assessment-result" style="display: none;">
+                <h3>Domain Assessment Result</h3>
+                <p class="risk-level"></p>
+                <p class="rationale"></p>
+            </div>
         </div>
     </form>
 </div>

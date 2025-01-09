@@ -1,9 +1,13 @@
 <div id="bias3" class="tab-content">
-    <h2>Bias Due to Missing Data</h2>
+    <h2>Bias in Selection of Participants</h2>
     <form id="bias3Form" class="assessment-form">
         <div class="form-group">
-            <label for="dataAvailable">3.1 Were outcome data available for all, or nearly all, participants?</label>
-            <select id="dataAvailable" name="dataAvailable" required>
+            <label for="selectionStart">3.1 Did assignment of participants to the intervention group or the comparator group rely on events or measurements that occurred after the start of follow up?
+                <div class="help-text">
+                    Using events or measurements that occurred after the start of follow up to assign participants to groups may lead to some participants having a period of 'immortal time' during which the outcome cannot occur. Examples include interventions defined as receipt of a minimum number of prescriptions or eligibility followed by receipt of a surgical intervention.
+                </div>
+            </label>
+            <select id="selectionStart" name="selectionStart" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -11,12 +15,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="dataAvailableNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="selectionStartNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="participantsExcluded">3.2 Were participants excluded due to missing data on intervention status?</label>
-            <select id="participantsExcluded" name="participantsExcluded" required>
+            <label for="exclusionAfterStart">3.2 Were participants excluded after the start of follow-up because they did not meet the definition of either the intervention or the comparator?
+                <div class="help-text">
+                    In this situation, participants who would have received the intervention but experienced an outcome event soon after the start of follow up are more likely to be excluded, leading to immortal time bias.
+                </div>
+            </label>
+            <select id="exclusionAfterStart" name="exclusionAfterStart" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -24,12 +32,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="participantsExcludedNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="exclusionAfterStartNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="reasonsReported">3.3 Were participants excluded due to missing data on other variables needed for the analysis?</label>
-            <select id="reasonsReported" name="reasonsReported" required>
+            <label for="startTiming">3.3 Were start of follow up and start of intervention the same for most participants?
+                <div class="help-text">
+                    If participants are not followed from the start of the intervention then a period of follow up has been excluded, and individuals who experienced the outcome soon after intervention will be missing from analyses. This problem may occur when prevalent, rather than new (incident), users of the intervention are included in analyses. If the comparison group is "no intervention" then follow up can start at any point at which participants remain eligible to start the intervention.
+                </div>
+            </label>
+            <select id="startTiming" name="startTiming" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -37,12 +49,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="reasonsReportedNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="startTimingNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="proportionMissing">3.4 Are the proportion of participants and reasons for missing data similar across interventions?</label>
-            <select id="proportionMissing" name="proportionMissing" required>
+            <label for="effectConstant">3.4 If start of follow up and start of intervention were not the same for most participants: Is the effect of intervention expected to be constant over the time period studied?
+                <div class="help-text">
+                    Consider the effect of intervention (for example, rate ratio) that is estimated by the result being assessed. If the effect varies over time the estimate based on follow up from the start of intervention will differ from the effect restricted to later follow up.
+                </div>
+            </label>
+            <select id="effectConstant" name="effectConstant" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -50,12 +66,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="proportionMissingNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="effectConstantNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="potentialImpact">3.5 Is there evidence that results were robust to the presence of missing data?</label>
-            <select id="potentialImpact" name="potentialImpact" required>
+            <label for="selectionBias">3.5 Was selection of participants into the study (or into the analysis) based on participant characteristics observed after the start of intervention?
+                <div class="help-text">
+                    Selection bias occurs when selection is related to an effect of either intervention or a cause of intervention and an effect of either the outcome or a cause of the outcome. This domain does not address exclusion because of missing data.
+                </div>
+            </label>
+            <select id="selectionBias" name="selectionBias" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -63,7 +83,7 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="potentialImpactNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="selectionBiasNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div id="bias3Result" class="assessment-result" style="display: none;">

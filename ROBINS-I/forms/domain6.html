@@ -1,9 +1,13 @@
 <div id="bias6" class="tab-content">
-    <h2>Bias in Selection of Reported Results</h2>
+    <h2>Bias in Measurement of Outcomes</h2>
     <form id="bias6Form" class="assessment-form">
         <div class="form-group">
-            <label for="analysisPreSpecified">6.1 Was the reported effect estimate likely to be selected, on the basis of the results, from multiple outcome measurements within the outcome domain?</label>
-            <select id="analysisPreSpecified" name="analysisPreSpecified" required>
+            <label for="methodsAppropriate">6.1 Was the method of measuring the outcome appropriate?
+                <div class="help-text">
+                    Consider whether the outcome was assessed using a method that would correctly capture the outcome of interest. For example, administrative databases might use codes that do not correctly identify all cases of the outcome, or measurement methods might lack validation in the population being studied.
+                </div>
+            </label>
+            <select id="methodsAppropriate" name="methodsAppropriate" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -11,12 +15,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="analysisPreSpecifiedNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="methodsAppropriateNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="multipleAnalyses">6.2 Was the reported effect estimate likely to be selected, on the basis of the results, from multiple analyses of the intervention-outcome relationship?</label>
-            <select id="multipleAnalyses" name="multipleAnalyses" required>
+            <label for="measurementDifferences">6.2 Could differences between intervention groups in how the outcome was measured have led to bias?
+                <div class="help-text">
+                    Differential measurement of outcomes can occur when different methods or approaches are used to assess outcomes in different intervention groups. For example, more frequent tests or examinations in one group can lead to increased detection of outcomes.
+                </div>
+            </label>
+            <select id="measurementDifferences" name="measurementDifferences" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -24,12 +32,16 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="multipleAnalysesNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="measurementDifferencesNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="subgroupAnalyses">6.3 Was the reported effect estimate likely to be selected, on the basis of the results, from different subgroups?</label>
-            <select id="subgroupAnalyses" name="subgroupAnalyses" required>
+            <label for="assessorBlinding">6.3 Were outcome assessors aware of the intervention received by study participants?
+                <div class="help-text">
+                    Knowledge of the intervention received could influence how the outcome is assessed when there is judgement involved. The importance of blinding of outcome assessors will depend on how much judgement is involved in determining outcomes.
+                </div>
+            </label>
+            <select id="assessorBlinding" name="assessorBlinding" required>
                 <option value="">Select answer...</option>
                 <option value="Y">Yes (Y)</option>
                 <option value="PY">Probably Yes (PY)</option>
@@ -37,7 +49,41 @@
                 <option value="N">No (N)</option>
                 <option value="NI">No Information (NI)</option>
             </select>
-            <textarea name="subgroupAnalysesNotes" placeholder="Additional notes..." rows="2"></textarea>
+            <textarea name="assessorBlindingNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="assessmentInfluence">6.4 Could assessment of the outcome have been influenced by knowledge of intervention received?
+                <div class="help-text">
+                    Even if outcome assessors were aware of the intervention received, this question asks whether such knowledge could have influenced their assessment. For example, knowledge of the intervention might have little impact on assessment of an objective outcome such as death but could influence assessment of a subjective outcome such as quality of life.
+                </div>
+            </label>
+            <select id="assessmentInfluence" name="assessmentInfluence" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="assessmentInfluenceNotes" placeholder="Additional notes..." rows="2"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="errorLikely">6.5 Could systematic error in measurement of the outcome relate to intervention received?
+                <div class="help-text">
+                    Systematic error (bias) can occur if there are systematic differences between intervention groups in how outcomes are ascertained. Consider whether any systematic error in outcome measurement is likely to be different for participants receiving different interventions.
+                </div>
+            </label>
+            <select id="errorLikely" name="errorLikely" required>
+                <option value="">Select answer...</option>
+                <option value="Y">Yes (Y)</option>
+                <option value="PY">Probably Yes (PY)</option>
+                <option value="PN">Probably No (PN)</option>
+                <option value="N">No (N)</option>
+                <option value="NI">No Information (NI)</option>
+            </select>
+            <textarea name="errorLikelyNotes" placeholder="Additional notes..." rows="2"></textarea>
         </div>
 
         <div id="bias6Result" class="assessment-result" style="display: none;">
